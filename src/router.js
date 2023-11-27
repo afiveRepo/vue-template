@@ -5,7 +5,7 @@ const routes =  [
     path: "/",
     alias: "/home",
     name: "home-page",
-    component: () => import("./components/HomePage")
+    component: () => import("./components/ProductPage")
   },
   
 ];
