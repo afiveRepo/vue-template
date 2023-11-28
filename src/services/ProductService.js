@@ -1,10 +1,10 @@
 import http from "../http-common";
 
 class ProductService{
-    GetProduct(){
+    GetProducts(){
         return http.get("/product");
     }
-    GetProductByID(){
+    GetProductByID(id){
         return http.get(`/product/${id}`);
     }
     AddProduct(data){
@@ -14,3 +14,4 @@ class ProductService{
         return http.put(`/product/${id}`,data);
     }
 }
+export default new ProductService();

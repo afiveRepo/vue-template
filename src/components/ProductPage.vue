@@ -12,7 +12,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(product, index) in products">
+                <tr v-for="(product, index) in products" :key="index">
                     <th scope="row">{{ index }}</th>
                     <td>{{ product.product_name }}</td>
                     <td>{{ product.product_price }}</td>
@@ -27,10 +27,10 @@
 </template>
 
 <script>
-import Products from "../services/ProductService";
+import ProductService from "../services/ProductService";
 
 export default {
-    name: "Home-page",
+    name: "Product-page",
     data() {
         return {
             products: [],
@@ -38,7 +38,7 @@ export default {
     },
     methods: {
         retrieveProducts() {
-            Products.GetProduct()
+            ProductService.GetProducts()
                 .then(response => {
                     this.products = response.data;
                     console.log(response.data);
