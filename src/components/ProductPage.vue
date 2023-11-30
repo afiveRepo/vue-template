@@ -1,5 +1,6 @@
 <template>
     <div class="Product">
+        <button @click="$router.push('/addProduct')" class="btn btn-primary mt-2">Add Product</button>
         <table class="table">
             <thead>
                 <tr>

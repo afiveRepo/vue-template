@@ -10,13 +10,10 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <router-link to="/home" class="nav-link active" aria-current="page">Home</router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <router-link to="/products" class="nav-link">Product</router-link>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -34,7 +31,7 @@
       </div>
     </nav>
 
-    <div class="container mt-3">
+    <div class="container">
       <router-view />
     </div>
   </div>
